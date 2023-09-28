@@ -40,7 +40,7 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
                 callback_data=f"add_playlist {videoid}",
             ),
             InlineKeyboardButton(
-                text="🌹 sᴏᴜʀᴄᴇ 🌹", url=f"matraxsohbettttt"
+                text="🌹 sᴏᴜʀᴄᴇ 🌹", url=f"cavresozel"
             ),
         ],
         [
@@ -48,7 +48,7 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
                 text=_["PL_B_3"],
                 callback_data=f"PanelMarkup {videoid}|{chat_id}",
             ),
-            InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 💌", url=f"{SUPPORT_GROUP}"),
+            InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 💌", url=f"{SUPPORT_GROUP}"), "cavresozel"
         ],
     ]
     return buttons
@@ -68,7 +68,7 @@ def telegram_markup_timer(_, chat_id, played, dur):
                 text=_["PL_B_2"],
                 callback_data=f"add_playlist {videoid}",
             ),
-            InlineKeyboardButton(text="🌹 sᴏᴜʀᴄᴇ 🌹", url=f"https://github.com/yildizcavres/ShizukaXMusic"),
+            InlineKeyboardButton(text="🌹 sᴏᴜʀᴄᴇ 🌹", url=f"https://github.com/cavres34/ShizukaXMusic/tree/main"),
         ],
         [
             InlineKeyboardButton(
@@ -91,7 +91,7 @@ def stream_markup(_, videoid, chat_id):
                 text=_["PL_B_2"],
                 callback_data=f"add_playlist {videoid}",
             ),
-            InlineKeyboardButton(text="🌹 sᴏᴜʀᴄᴇ 🌹", url=f"https://github.com/yildizcavres/ShizukaXMusic"),
+            InlineKeyboardButton(text="🌹 sᴏᴜʀᴄᴇ 🌹", url=f"https://github.com/cavres34/ShizukaXMusic/tree/main"),
         ],
         [
             InlineKeyboardButton(
