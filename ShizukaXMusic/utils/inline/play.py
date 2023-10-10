@@ -66,9 +66,9 @@ def telegram_markup_timer(_, chat_id, played, dur):
         [
             InlineKeyboardButton(
                 text=_["PL_B_2"],
-                callback_data=f"add_playlist {videoid}",
+                callback_data=f"add_playlist {videaoid}",
             ),
-            InlineKeyboardButton(text="🌹 sᴏᴜʀᴄᴇ 🌹", url=f"https://github.com/cavres34/ShizukaXMusic/tree/main"),
+            InlineKeyboardButton(text="🌹 sᴏᴜʀᴄᴇ 🌹", url=f"@rahatsizetmeyiniz34"),
         ],
         [
             InlineKeyboardButton(
