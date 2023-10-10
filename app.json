@@ -90,7 +90,7 @@
       },
       "UPSTREAM_REPO": {
         "description": "If you dont know this, Leave as it is",
-        "value": "https://github.com/cavres34/ShizukaXMusic/tree/main",
+        "value": "@cavresozel",
         "required": true
       },
       "UPSTREAM_BRANCH": {
