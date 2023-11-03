@@ -1,6 +1,6 @@
 {
-    "name": "affetmezler müzik",
-    "description": "Shizuka Is A Telegram Telegram Group Calls streaming bot with some useful features, written in Python with Pyrogram and Py-Tgcalls.",
+    "name": "❥㋛︎𝙂𝙚𝙘̧𝙢𝙞𝙨̧𝙡𝙚 𝙃𝙚𝙨𝙖𝙗ı𝙢☘",
+    "description": "𝙂𝙚𝙘̧𝙢𝙞𝙨̧𝙡𝙚 𝙃𝙚𝙨𝙖𝙗ı𝙢, Is A Telegram Telegram Group Calls streaming bot with some useful features, written in Python with Pyrogram and Py-Tgcalls.",
     "logo": "https://te.legra.ph/file/798b7275e58d09ac6b095.jpg",
     "keywords": [
     "python3",
@@ -45,7 +45,7 @@
       },
       "OWNER_ID": {
         "description": "The user id(s) of user(s) whom you would like to add as a OWNER. Multiple values shall be seperated with a space.",
-        "value": "5621767680",
+        "value": "6366762649",
         "required": true
       },
       "STRING_SESSION": {
@@ -60,7 +60,7 @@
       },
       "SUPPORT_CHANNEL": {
         "description": "Your Updates Channel link",
-        "value": "https://t.me/affetmezler_sohbet",
+        "value": "https://t.me/HAYDUTLARYANGRUBU",
         "required": false
       },
       "PING_IMG_URL": {
@@ -90,7 +90,7 @@
       },
       "UPSTREAM_REPO": {
         "description": "If you dont know this, Leave as it is",
-        "value": "@cavresozel",
+        "value": "@menrosee",
         "required": true
       },
       "UPSTREAM_BRANCH": {
