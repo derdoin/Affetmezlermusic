@@ -7,8 +7,8 @@ from pyrogram import filters
 
 load_dotenv()
 
-API_ID = int(getenv("API_ID", "20079689"))
-API_HASH = getenv("API_HASH", "f4bce2b3138c661ce8f2e986807d91b3")
+API_ID = int(getenv("API_ID", "22274468"))
+API_HASH = getenv("API_HASH", "5fc34ce82a92de738f07bcd16976e69a")
 BOT_TOKEN = getenv("BOT_TOKEN")
 
 MONGO_DB_URI = getenv("MONGO_DB_URI", None)
@@ -20,7 +20,7 @@ SONG_DOWNLOAD_DURATION = int(getenv("SONG_DOWNLOAD_DURATION_LIMIT", "180"))
 LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1002031598632"))
 
 MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME")
-OWNER_ID = list(map(int, getenv("OWNER_ID", "6366762649").split()))
+OWNER_ID = list(map(int, getenv("OWNER_ID", "6106410338").split()))
 HEROKU_API_KEY = getenv("HEROKU_API_KEY") 
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 
