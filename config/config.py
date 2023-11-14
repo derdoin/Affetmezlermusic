@@ -7,9 +7,9 @@ from pyrogram import filters
 
 load_dotenv()
 
-API_ID = int(getenv("API_ID", "22388849"))
-API_HASH = getenv("API_HASH", "ff9531f768a401cbc72f36d0b1a4a24a")
-BOT_TOKEN = getenv("BOT_TOKEN", "6617768397:AAEV6YJvWJf-xqugCEwbBXGSroIHpyh9PdQ")
+API_ID = int(getenv("API_ID", "772b30c28846c53a687987e694b31daa"))
+API_HASH = getenv("API_HASH"772b30c28846c53a687987e694b31daa")
+BOT_TOKEN = getenv("BOT_TOKEN", "6388738328:AAGiQO_zwq7stdD5GfIhUPHExaFlIUb1rsY")
 
 MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://Kingbrukh:kingkhan@kingbruh.ra3pjgm.mongodb.net/?retryWrites=true&w=majority")
 
@@ -17,19 +17,19 @@ DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", "900"))
 
 SONG_DOWNLOAD_DURATION = int(getenv("SONG_DOWNLOAD_DURATION_LIMIT", "180"))
 
-LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1002031598632"))
+LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1001913507397"))
 
 MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME")
-OWNER_ID = list(map(int, getenv("OWNER_ID", "5422960727").split()))
+OWNER_ID = list(map(int, getenv("OWNER_ID", "6366762649").split()))
 HEROKU_API_KEY = getenv("HEROKU_API_KEY") 
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/yildizcavres/ShizukaXMusiccc",
+    "https://github.com/derdoin/ShizukaXMusiccc",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
-GITHUB_REPO = getenv("GITHUB_REPO", "https://github.com/cavres34/ShizukaXMusic/tree/main")
+GITHUB_REPO = getenv("GITHUB_REPO", "https://github.com/derdoin/ShizukaXMusic/tree/main")
 GIT_TOKEN = getenv("GIT_TOKEN", None)
 
 SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "@menrosee")
