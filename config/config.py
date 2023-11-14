@@ -26,10 +26,10 @@ HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/derdoin/ShizukaXMusiccc",
+    "https://github.com/derdoin/Affetmezlermusic",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
-GITHUB_REPO = getenv("GITHUB_REPO", "https://github.com/derdoin/ShizukaXMusic/tree/main")
+GITHUB_REPO = getenv("GITHUB_REPO", "https://github.com/derdoin/Affetmezlermusic/tree/main")
 GIT_TOKEN = getenv("GIT_TOKEN", None)
 
 SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "@menrosee")
