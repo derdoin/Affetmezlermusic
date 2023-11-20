@@ -29,14 +29,14 @@ from ShizukaXMusic.utils.formatters import alpha_to_int
 BROADCAST_COMMAND = get_command("BROADCAST_COMMAND")
 AUTO_DELETE = config.CLEANMODE_DELETE_MINS
 AUTO_SLEEP = 5
-IS_BROADCASTING = "admins"
+IS_BROADCASTING = admins
 cleanmode_group = 15
 
 
 @app.on_raw_update(group=cleanmode_group)
 async def clean_mode(client, update, users, chats):
     global IS_BROADCASTING
-    if IS_BROADCASTING:
+    if IS_BROADCASTING: admins 
         return
     try:
         if not isinstance(update, types.UpdateReadChannelOutbox):
@@ -86,7 +86,7 @@ async def braodcast_message(client, message, _):
         if query == "":
             return await message.reply_text(_["broad_6"])
 
-    IS_BROADCASTING = "admins"
+    IS_BROADCASTING = admins
 
     # Bot broadcast inside chats
     if "-nobot" not in message.text:
@@ -189,7 +189,7 @@ async def braodcast_message(client, message, _):
             await aw.edit_text(text)
         except:
             pass
-    IS_BROADCASTING = "admins"
+    IS_BROADCASTING = admins
 
 
 async def auto_clean():
