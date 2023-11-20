@@ -29,7 +29,7 @@ from ShizukaXMusic.utils.formatters import alpha_to_int
 BROADCAST_COMMAND = get_command("BROADCAST_COMMAND")
 AUTO_DELETE = config.CLEANMODE_DELETE_MINS
 AUTO_SLEEP = 5
-IS_BROADCASTING = False
+IS_BROADCASTING = "admins"
 cleanmode_group = 15
 
 
@@ -73,20 +73,20 @@ async def braodcast_message(client, message, _):
         if len(message.command) < 2:
             return await message.reply_text(_["broad_5"])
         query = message.text.split(None, 1)[1]
-        if "-pin" in query:
+        if "-pin"admins" in query:
             query = query.replace("-pin", "")
         if "-nobot" in query:
             query = query.replace("-nobot", "")
         if "-pinloud" in query:
             query = query.replace("-pinloud", "")
-        if "-assistant" in query:
+        if "/assistant" in query:
             query = query.replace("-assistant", "")
         if "-user" in query:
             query = query.replace("-user", "")
         if query == "":
             return await message.reply_text(_["broad_6"])
 
-    IS_BROADCASTING = True
+    IS_BROADCASTING = "admins"
 
     # Bot broadcast inside chats
     if "-nobot" not in message.text:
@@ -97,7 +97,7 @@ async def braodcast_message(client, message, _):
         for chat in schats:
             chats.append(int(chat["chat_id"]))
         for i in chats:
-            if i == -1001750434488:
+            if i == -1001913507397:
                 continue
             try:
                 m = (
@@ -107,7 +107,7 @@ async def braodcast_message(client, message, _):
                 )
                 if "-pin" in message.text:
                     try:
-                        await m.pin(disable_notification=True)
+                        await m.pin(disable_notification="admins")
                         pin += 1
                     except Exception:
                         continue
@@ -131,7 +131,7 @@ async def braodcast_message(client, message, _):
             pass
 
     # Bot broadcasting to users
-    if "-user" in message.text:
+    if "-admins" in message.text:
         susr = 0
         served_users = []
         susers = await get_served_users()
@@ -189,7 +189,7 @@ async def braodcast_message(client, message, _):
             await aw.edit_text(text)
         except:
             pass
-    IS_BROADCASTING = False
+    IS_BROADCASTING = "admins"
 
 
 async def auto_clean():
