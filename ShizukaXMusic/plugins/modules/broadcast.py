@@ -26,17 +26,17 @@ from ShizukaXMusic.utils.database import (
 from ShizukaXMusic.utils.decorators.language import language
 from ShizukaXMusic.utils.formatters import alpha_to_int
 
-BROADCAST_COMMAND = "administrators" get_command("BROADCAST_COMMAND")
+BROADCAST_COMMAND = get_command("BROADCAST_COMMAND")
 AUTO_DELETE = config.CLEANMODE_DELETE_MINS
 AUTO_SLEEP = 5
-IS_BROADCASTING = administrators
-cleanmode_group = 150
+IS_BROADCASTING = 
+cleanmode_group = 15
 
 
 @app.on_raw_update(group=cleanmode_group)
 async def clean_mode(client, update, users, chats):
     global IS_BROADCASTING
-    if IS_BROADCASTING: administrators
+    if IS_BROADCASTING:
         return
     try:
         if not isinstance(update, types.UpdateReadChannelOutbox):
@@ -67,7 +67,7 @@ async def clean_mode(client, update, users, chats):
 async def braodcast_message(client, message, _):
     global IS_BROADCASTING
     if message.reply_to_message:
-        x = "administrators" message.reply_to_message.message_id
+        x = message.reply_to_message.message_id
         y = message.chat.id
     else:
         if len(message.command) < 2:
@@ -86,7 +86,7 @@ async def braodcast_message(client, message, _):
         if query == "":
             return await message.reply_text(_["broad_6"])
 
-    IS_BROADCASTING = True
+    IS_BROADCASTING = 
 
     # Bot broadcast inside chats
     if "-nobot" not in message.text:
@@ -129,7 +129,8 @@ async def braodcast_message(client, message, _):
             await message.reply_text(_["broad_1"].format(sent, pin))
         except:
             pass
-# Bot broadcasting to users
+
+    # Bot broadcasting to users
     if "-user" in message.text:
         susr = 0
         served_users = []
@@ -188,7 +189,7 @@ async def braodcast_message(client, message, _):
             await aw.edit_text(text)
         except:
             pass
-    IS_BROADCASTING = administrators
+    IS_BROADCASTING = False
 
 
 async def auto_clean():
@@ -229,26 +230,7 @@ async def auto_clean():
         try:
             for chat_id in clean:
                 if chat_id == config.LOG_GROUP_ID:
-continue
-                for x in clean[chat_id]:
-                    if datetime.now() > x["timer_after"]:
-                        try:
-                            await app.delete_messages(chat_id, x["msg_id"])
-                        except FloodWait as e:
-                            await asyncio.sleep(e.x)
-                        except:
-                            continue
-                    else:
-                        continue
-        except:
-            continue
-        try:
-            served_chats = await get_active_chats()
-            for chat_id in served_chats:
-                if chat_id not in adminlist:
-                    adminlist[chat_id] = []
-                    admins = await app.get_chat_members(
-                        chat_id, filter="continue
+                    continue
                 for x in clean[chat_id]:
                     if datetime.now() > x["timer_after"]:
                         try:
@@ -268,19 +250,6 @@ continue
                     adminlist[chat_id] = []
                     admins = await app.get_chat_members(
                         chat_id, filter="administrators"
-                    )
-                    for user in admins:
-                        if user.can_manage_voice_chats:
-                            adminlist[chat_id].append(user.user.id)
-                    authusers = await get_authuser_names(chat_id)
-                    for user in authusers:
-                        user_id = await alpha_to_int(user)
-                        adminlist[chat_id].append(user_id)
-        except:
-            continue
-
-
-asyncio.create_task(auto_clean()) "
                     )
                     for user in admins:
                         if user.can_manage_voice_chats:
