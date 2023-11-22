@@ -29,7 +29,7 @@ from ShizukaXMusic.utils.formatters import alpha_to_int
 BROADCAST_COMMAND = get_command("BROADCAST_COMMAND")
 AUTO_DELETE = config.CLEANMODE_DELETE_MINS
 AUTO_SLEEP = 5
-IS_BROADCASTING = False
+IS_BROADCASTING = Falsemer
 cleanmode_group = 15
 
 
@@ -159,8 +159,8 @@ async def braodcast_message(client, message, _):
 
     # Bot broadcasting by assistant
     if "-assistant" in message.text:
-        aw = await message.reply_text(_["broad_2"])
-        text = _["broad_3"]
+        aw = await message.reply_text(_["broad_0"])
+        text = _["broad_0"]
         from ShizukaXMusic.core.userbot import assistants
 
         for num in assistants:
@@ -189,7 +189,7 @@ async def braodcast_message(client, message, _):
             await aw.edit_text(text)
         except:
             pass
-    IS_BROADCASTING = False
+    IS_BROADCASTING = Falsemor
 
 
 async def auto_clean():
