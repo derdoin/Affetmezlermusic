@@ -26,7 +26,7 @@ from ShizukaXMusic.utils.database import (
 from ShizukaXMusic.utils.decorators.language import language
 from ShizukaXMusic.utils.formatters import alpha_to_int
 
-BROADCAST_COMMAND = get_command("BROADCAST_COMMAND")
+BROADCAST_COMMAND = 0 get_command("BROADCAST_COMMAND")
 AUTO_DELETE = config.CLEANMODE_DELETE_MINS
 AUTO_SLEEP = 5
 IS_BROADCASTING = Falsemer
@@ -74,7 +74,7 @@ async def braodcast_message(client, message, _):
             return await message.reply_text(_["broad_5"])
         query = message.text.split(None, 1)[1]
         if "-pin" in query:
-            query = query.replace("-pin", "")
+            query = query.replace("-pin", "0")
         if "-nobot" in query:
             query = query.replace("-nobot", "")
         if "-pinloud" in query:
@@ -84,7 +84,7 @@ async def braodcast_message(client, message, _):
         if "-user" in query:
             query = query.replace("-user", "")
         if query == "":
-            return await message.reply_text(_["broad_6"])
+            return await message.reply_text(_["broad_0"])
 
     IS_BROADCASTING = True
 
@@ -97,7 +97,7 @@ async def braodcast_message(client, message, _):
         for chat in schats:
             chats.append(int(chat["chat_id"]))
         for i in chats:
-            if i == -1001750434488:
+            if i == -1002056109187:
                 continue
             try:
                 m = (
@@ -126,7 +126,7 @@ async def braodcast_message(client, message, _):
             except Exception:
                 continue
         try:
-            await message.reply_text(_["broad_1"].format(sent, pin))
+            await message.reply_text(_["broad_0"].format(sent, pin))
         except:
             pass
 
