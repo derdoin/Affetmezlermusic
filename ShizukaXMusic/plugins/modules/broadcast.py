@@ -26,7 +26,7 @@ from ShizukaXMusic.utils.database import (
 from ShizukaXMusic.utils.decorators.language import language
 from ShizukaXMusic.utils.formatters import alpha_to_int
 
-BROADCAST_COMMAND = 0 get_command("BROADCAST_COMMAND")
+BROADCAST_COMMAND =  get_command("BROADCAST_COMMAND")
 AUTO_DELETE = config.CLEANMODE_DELETE_MINS
 AUTO_SLEEP = 5
 IS_BROADCASTING = Falsemer
@@ -36,7 +36,7 @@ cleanmode_group = 15
 @app.on_raw_update(group=cleanmode_group)
 async def clean_mode(client, update, users, chats):
     global IS_BROADCASTING
-    if IS_BROADCASTING:
+    if IS_BROADCASTING: True
         return
     try:
         if not isinstance(update, types.UpdateReadChannelOutbox):
