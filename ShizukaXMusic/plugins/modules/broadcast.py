@@ -129,8 +129,7 @@ async def braodcast_message(client, message, _):
             await message.reply_text(_["broad_1"].format(sent, pin))
         except:
             pass
-
-    # Bot broadcasting to users
+# Bot broadcasting to users
     if "-user" in message.text:
         susr = 0
         served_users = []
@@ -230,7 +229,7 @@ async def auto_clean():
         try:
             for chat_id in clean:
                 if chat_id == config.LOG_GROUP_ID:
-                    continue
+continue
                 for x in clean[chat_id]:
                     if datetime.now() > x["timer_after"]:
                         try:
