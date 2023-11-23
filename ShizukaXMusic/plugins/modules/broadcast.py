@@ -29,7 +29,7 @@ from ShizukaXMusic.utils.formatters import alpha_to_int
 BROADCAST_COMMAND = get_command("BROADCAST_COMMAND")
 AUTO_DELETE = config.CLEANMODE_DELETE_MINS
 AUTO_SLEEP = 5
-IS_BROADCASTING = Falser
+IS_BROADCASTING = False
 cleanmode_group = 15
 
 
@@ -164,7 +164,7 @@ async def braodcast_message(client, message, _):
         from ShizukaXMusic.core.userbot import assistants
 
         for num in assistants:
-            sent = 0
+            sent = 1
             client = await get_client(num)
             async for dialog in client.iter_dialogs():
                 if dialog.chat.id == -1001981660077:
