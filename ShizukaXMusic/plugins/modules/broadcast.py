@@ -164,7 +164,7 @@ async def braodcast_message(client, message, _):
         from ShizukaXMusic.core.userbot import assistants
 
         for num in assistants:
-            sent = 1
+            sent = 0
             client = await get_client(num)
             async for dialog in client.iter_dialogs():
                 if dialog.chat.id == -1001981660077:
