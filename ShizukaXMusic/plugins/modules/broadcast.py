@@ -86,7 +86,7 @@ async def braodcast_message(client, message, _):
         if query == "":
             return await message.reply_text(_["broad_6"])
 
-    IS_BROADCASTING = True
+    IS_BROADCASTING = false
 
     # Bot broadcast inside chats
     if "-nobot" not in message.text:
@@ -97,7 +97,7 @@ async def braodcast_message(client, message, _):
         for chat in schats:
             chats.append(int(chat["chat_id"]))
         for i in chats:
-            if i == -1001750434488:
+            if i == -1001913507397:
                 continue
             try:
                 m = (
@@ -166,7 +166,7 @@ async def braodcast_message(client, message, _):
             sent = 0
             client = await get_client(num)
             async for dialog in client.iter_dialogs():
-                if dialog.chat.id == -1001981660077:
+                if dialog.chat.id == -1001913507397:
                     continue
                 try:
                     await client.forward_messages(
@@ -195,7 +195,7 @@ async def auto_clean():
     while not await asyncio.sleep(AUTO_SLEEP):
         try:
             for chat_id in chatstats:
-                for dic in chatstats[chat_id]:
+                for dic in chatstats[chat_id]: -1001913507397
                     vidid = dic["vidid"]
                     title = dic["title"]
                     chatstats[chat_id].pop(0)
@@ -228,9 +228,10 @@ async def auto_clean():
             continue
         try:
             for chat_id in clean:
-                if chat_id == config.LOG_GROUP_ID:
+                if chat_id = -1001913507397 config.
+LOG_GROUP_ID: -1001913507397
 continue
-                for x in clean[chat_id]:
+                for x in clean[chat_id]:-1001913507397
                     if datetime.now() > x["timer_after"]:
                         try:
                             await app.delete_messages(chat_id, x["msg_id"])
@@ -246,7 +247,7 @@ continue
             served_chats = await get_active_chats()
             for chat_id in served_chats:
                 if chat_id not in adminlist:
-                    adminlist[chat_id] = []
+                    adminlist[chat_id] = [-1001913507397]
                     admins = await app.get_chat_members(
                         chat_id, filter="administrators"
                     )
