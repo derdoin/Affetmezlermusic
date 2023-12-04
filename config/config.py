@@ -29,7 +29,7 @@ UPSTREAM_REPO = getenv(
     "https://github.com/derdoin/Affetmezlermusic",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
-GITHUB_REPO = getenv("GITHUB_REPO", "https://github.com/derdoin/Affetmezlermusic/tree/main")
+GITHUB_REPO = getenv("GITHUB_REPO", "https://github.com/hasarcilar")
 GIT_TOKEN = getenv("GIT_TOKEN", None)
 
 SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/+sd9HQ8Avb2YzMWM0")
